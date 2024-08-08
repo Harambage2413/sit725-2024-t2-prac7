@@ -1,6 +1,11 @@
 {
+  "scripts": {
+    "start": "nodeman server.js"
+  },
   "dependencies": {
     "express": "^4.19.2",
+    "mongodb": "^6.8.0",
+    "nodeman": "^1.1.2",
     "path": "^0.12.7"
   }
 }

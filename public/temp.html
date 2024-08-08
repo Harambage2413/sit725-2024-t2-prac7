@@ -2,13 +2,13 @@
 <html>
 
 <head>
-  <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!--Import materialize.css-->
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
 
-  <!--Let browser know website is optimized for mobile-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Compiled and minified JavaScript -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -28,17 +28,20 @@
       </div>
     </nav>
   </div>
-  <div style="background-image: url(./images/background3.jpg);" id="index-banner" class="parallax-container">
+  <div  style="background-image: url(./images/background3.jpg);" id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center teal-text text-lighten-2">Deakin University</h1>
+        <h1 id="heading" class="header center teal-text text-lighten-2">Deakin University</h1>
         <div class="row center">
-          <h5 class="header col s12 light">Best University in Australia</h5>
+          <!-- <h5 class="header col s12 light">Best University in Australia</h5> -->
         </div>
         <div class="row center">
-          <a href="https://www.deakin.edu.au/" id="download-button"
-            class="btn-large waves-effect waves-light teal lighten-1">Navigate to Deakin Website</a>
+          <!-- <a class="waves-effect waves-light btn click-me-button modal-trigger" id="clickMeButton" data-target="modal1"><i class="material-icons left">auto_fix_high</i>Click Me</a> -->
+          <!-- <a id="clickMeButton" data-target="modal1" -->
+          
+            <!-- class="btn-large waves-effect waves-light teal lighten-1 modal-trigger">Click here to change the picture</a> -->
+            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Click here to change picture</a>
         </div>
         <br><br>
 
@@ -66,12 +69,44 @@
       <div class="row">
         <div class="col l6 s12">
           <h5 class="white-text">Deakin University</h5>
-          <p class="grey-text text-lighten-4">Deakin University consistently ranks highly in undergraduate student satisfaction; in the 2019 Student Experience Survey, Deakin had the fourth-highest student satisfaction rating nationally, the highest student satisfaction rating out of all Australian public universities</p>
+          <p class="grey-text text-lighten-4">Deakin University consistently ranks highly in undergraduate student
+            satisfaction; in the 2019 Student Experience Survey, Deakin had the fourth-highest student satisfaction
+            rating nationally, the highest student satisfaction rating out of all Australian public universities</p>
         </div>
       </div>
     </div>
   </footer>
-
+  <div id="modal1" class="modal modal-fixed-footer " style="height: 350px;">
+    <div class="row modal-content">
+      <form class="">
+        <div class="row">
+          <div class="input-field">
+            <input id="title" type="text" class="validate">
+            <label for="title">Title</label>
+          </div>
+          <div class="input-field">
+            <select id="image" >
+              <option value="" disabled selected>Choose the picture you want</option>
+              <option value="/images/background1.jpg">Motor Bike</option>
+              <option value="/images/background2.jpg">Old car</option>
+              <option value="/images/background3.jpg">Mountains</option>
+            </select>
+            <label>Image</label>
+          </div>
+        </div>
+      
+       
+        <div class="row">
+          <div class="input-field  center-align">
+            <a class="waves-effect waves-light btn" id="formSubmit">submit</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="js/scriptMongo.js"></script>
 </body>
 
 </html>
